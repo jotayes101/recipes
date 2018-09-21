@@ -29,6 +29,20 @@ postAjax(Metronic.getGlobalStorePath() + "/storeAccess.html", { node: "newprofil
 });
 
 /**
+ * Ejemplo recorrer un objeto
+ * Nota: en este metodo no se puede hacer un return o break para esos casos use for tipico
+ */
+// JSON
+Object.keys(obj).forEach(function(key) {
+    console.log(obj[key])
+});
+// ARRAY
+array.forEach(function(element, index) {
+    console.log(element)
+});
+
+
+/**
  * Ejemplos asignacion de eventos
  */
 // Vanilla
