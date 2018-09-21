@@ -75,7 +75,7 @@ document.getElementById('about').cloneNode(true)
 document.getElementById('about').parentNode
 document.getElementById('wrap').hasChildNodes()
 document.getElementById('wrap').nextSibling
-// empty elemeny wrap
+// empty element wrap
 var wrap = document.getElementById('wrap')
 while(wrap.firstChild) wrap.removeChild(wrap.firstChild)
 
