@@ -1,4 +1,4 @@
-# PRINT PRETTY JSON FROM HASH
+# PRINT PRETTY JSON FROM HASH -
 use JSON;
 sub remove_newlines {
     my $str = shift;
@@ -29,12 +29,12 @@ my $pretty = JSON->new->pretty->encode(\%HoA);
 $pretty =~ s/(\[.*?\])/remove_newlines($1)/egsm;
 print "pretty:\n$pretty";
 
-# Otra opcion para imprimir hash como texto
+# Otra opcion para imprimir hash como texto -
 use Data::Dumper;
 print "HashFields: " .(Dumper(%HoA));
 
 
-# Ordenar llaves compuestas por textos y numeros
+# Ordenar llaves compuestas por textos y numeros -
 my @old = ('texto1', 'texto10', 'texto2', 'texto20', 'texto5');
 my @new = sort { number_strip($a) <=> number_strip($b) } @old;
 foreach (@new) {
