@@ -35,8 +35,6 @@ function isIPad() {
 
 /**
  * Funciones para crear y descargar ficheros en navegador
- */
-/**
  * Dependencia FileSaver.js
  * @see https://github.com/eligrey/FileSaver.js
  * @param {Object} Objecto blob con Array de lineas de fichero
@@ -68,3 +66,22 @@ var saveData = (function () {
     };
 }());
 saveData("jota mario", "jota.txt");
+
+/**
+ * Funcion para buscar el indice de un array de JSONs que cumpla la condicion que param2 = param3
+ * @param {object} Array de JSONs
+ * @param {string} nombre de la llave a buscar
+ * @param {string} valor de la llave a buscar
+ * @returns {number} primera posicion del array que cumple la condicion
+ */
+function getIdxJson(pObj, pAttr, pVal) {
+    for (var i in pObj) {
+        if ((pObj[i].config.hasOwnProperty(pAttr)) && (pObj[i].config[pAttr] == pVal)) {
+            break;
+        } else {
+            continue;
+        }
+    }
+    return i;
+};
+getIdxJson(objSearch, 'dkid', jsoComu['componentid']);
