@@ -2,7 +2,7 @@
  * Peticion de tipo POST sin usar jQuery
  * @param {string} ruta peticion
  * @param {string || object} parametros
- * @param {function} Funcion a ejecutar al terminar
+ * @param {function} Funcion a ejecutar al completar el llamado
  */
 function postAjax(url, data, success) {
     var params = typeof data == 'string' ? data : Object.keys(data).map(
