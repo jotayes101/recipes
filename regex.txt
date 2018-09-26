@@ -1,6 +1,6 @@
 /^[0-9]*$/ // solo contiene numeros
 
-/\,$/ // ultima coma
+/\,$/ // ultima coma ,
 
 /ÑñáéíóúÁÉÍÓÚ/ // tildes
 
